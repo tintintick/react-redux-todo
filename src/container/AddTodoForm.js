@@ -1,9 +1,5 @@
 import React from 'react';
 import {
-	bindActionCreators
-} from "redux";
-
-import {
 	connect
 } from "react-redux";
 
@@ -25,8 +21,7 @@ let AddTodoComponent = ({
 					}
 					dispatch(addTodo(inputNode.value));
 					inputNode.value="";
-				}
-			}>
+				}}>
 				<input ref={(node)=>{inputNode=node;}} />
 				<button type="submit">Add Todo</button>
 			</form>
@@ -34,18 +29,5 @@ let AddTodoComponent = ({
 	);
 };
 
-// const mapStateToProps = (state) => {
-// 	return null;
-// };
-
-// const mapDispatchToProps = (dispatch) => {
-// 	return bindActionCreators({
-// 		onAddBtnClick: addTodo,
-// 	}, dispatch);
-// };
-
-let AddTodoForm = connect(
-	// mapStateToProps,
-	// mapDispatchToProps
-)(AddTodoComponent);
+let AddTodoForm = connect()(AddTodoComponent);
 export default AddTodoForm;

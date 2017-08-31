@@ -12,7 +12,13 @@ import {
 } from "redux";
 import todoApp from "./reducer";
 
-let store = createStore(todoApp);
+
+let initState = {
+	todos: [],
+	filter: "SHOW_ALL",
+};
+
+let store = createStore(todoApp, initState);
 ReactDOM.render(
 	<Provider store={store}>
 		<App />

@@ -7,19 +7,11 @@ const TodoList = ({
 }) => {
 	return (
 		<ul>
-		{
-			todoList.map((todoItme)=>
-				{	
-					<Todo 
-						key={todoItme.id} 
-						{...todoItme} 
-						onClick={()=>onToggleClick(todoItme.id)} 
-					/>
-				}	
-			)
-		}
+		{todoList.map((todoItme)=>
+			<Todo {...todoItme} key={todoItme.id} onClick={() => onToggleClick(todoItme.id)}/>
+		)}
 		</ul>
-	);
-};
+	)
+}
 
 export default TodoList;
