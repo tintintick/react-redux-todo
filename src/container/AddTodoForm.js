@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	bindActionCreators
 } from "redux";
@@ -10,7 +11,9 @@ import {
 	addTodo
 } from "../actions";
 
-let AddTodoComponent = () => {
+let AddTodoComponent = ({
+	dispatch
+}) => {
 	let inputNode;
 	return (
 		<div>

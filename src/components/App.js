@@ -1,4 +1,5 @@
-import AddTodo from "../container/AddTodoForm";
+import React from 'react';
+import AddTodoForm from "../container/AddTodoForm";
 import VisibleTodoList from "../container/VisibleTodoList";
 import Footer from "./Footer";
 
@@ -11,3 +12,5 @@ const App = () => {
 		</div>
 	);
 };
+
+export default App;
